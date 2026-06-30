@@ -22,14 +22,14 @@ export default function Home() {
           className="mt-10 flex flex-col gap-4 text-base font-medium sm:flex-row"
         >
           <Link
-            href="/signup"
+            href="/signup?role=instructor"
             className="rounded-full bg-mauve px-6 py-3 text-sand transition-colors hover:bg-rose"
           >
             I&apos;m an Instructor
           </Link>
           <Link
             id="studios"
-            href="/signup"
+            href="/signup?role=studio_owner"
             className="rounded-full border border-mauve px-6 py-3 text-ink transition-colors hover:bg-mauve/10"
           >
             I&apos;m a Studio Owner

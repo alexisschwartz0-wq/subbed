@@ -11,6 +11,18 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
+  if (user.user_metadata?.role === "instructor") {
+    const { data: instructor } = await supabase
+      .from("instructors")
+      .select("profile_id")
+      .eq("profile_id", user.id)
+      .maybeSingle();
+
+    if (!instructor) {
+      redirect("/onboarding/instructor");
+    }
+  }
+
   return (
     <main className="flex flex-1 flex-col px-6 py-12">
       <h1 className="text-2xl font-semibold text-ink">Dashboard</h1>
