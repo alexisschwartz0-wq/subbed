@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
@@ -39,6 +40,15 @@ export default async function DashboardPage() {
     <main className="flex flex-1 flex-col px-6 py-12">
       <h1 className="text-2xl font-semibold text-ink">Dashboard</h1>
       <p className="mt-2 text-sm text-ink/60">Signed in as {user.email}</p>
+
+      {user.user_metadata?.role === "studio_owner" && (
+        <Link
+          href="/dashboard/instructors"
+          className="mt-6 inline-block w-fit rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+        >
+          Browse instructors
+        </Link>
+      )}
     </main>
   );
 }
