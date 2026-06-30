@@ -2,6 +2,7 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import type { Database } from "@/types/database";
+import { startConversation } from "../messages/actions";
 
 type Specialty = Database["public"]["Enums"]["specialty"];
 const DISCIPLINES: { value: Specialty; label: string }[] = [
@@ -215,6 +216,20 @@ export default async function BrowseInstructorsPage({
                 </span>
               )}
             </div>
+
+            <form action={startConversation} className="mt-4">
+              <input
+                type="hidden"
+                name="instructorId"
+                value={instructor.profile_id}
+              />
+              <button
+                type="submit"
+                className="w-full rounded-full border border-mauve px-4 py-1.5 text-sm font-medium text-mauve transition-colors hover:bg-mauve/10"
+              >
+                Message
+              </button>
+            </form>
           </div>
         ))}
       </div>

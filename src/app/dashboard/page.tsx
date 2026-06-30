@@ -41,23 +41,32 @@ export default async function DashboardPage() {
       <h1 className="text-2xl font-semibold text-ink">Dashboard</h1>
       <p className="mt-2 text-sm text-ink/60">Signed in as {user.email}</p>
 
-      {user.user_metadata?.role === "studio_owner" && (
-        <Link
-          href="/dashboard/instructors"
-          className="mt-6 inline-block w-fit rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
-        >
-          Browse instructors
-        </Link>
-      )}
+      <div className="mt-6 flex w-fit gap-3">
+        {user.user_metadata?.role === "studio_owner" && (
+          <Link
+            href="/dashboard/instructors"
+            className="rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+          >
+            Browse instructors
+          </Link>
+        )}
 
-      {user.user_metadata?.role === "instructor" && (
+        {user.user_metadata?.role === "instructor" && (
+          <Link
+            href="/dashboard/studios"
+            className="rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+          >
+            Browse studios
+          </Link>
+        )}
+
         <Link
-          href="/dashboard/studios"
-          className="mt-6 inline-block w-fit rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+          href="/dashboard/messages"
+          className="rounded-full border border-mauve px-6 py-2 text-sm font-medium text-mauve transition-colors hover:bg-mauve/10"
         >
-          Browse studios
+          Messages
         </Link>
-      )}
+      </div>
     </main>
   );
 }
