@@ -35,7 +35,9 @@ export async function signup(formData: FormData) {
   }
 
   if (data.session) {
-    redirect(role === "instructor" ? "/onboarding/instructor" : "/dashboard");
+    redirect(
+      role === "instructor" ? "/onboarding/instructor" : "/onboarding/studio",
+    );
   }
 
   redirect("/signup?confirm=1");

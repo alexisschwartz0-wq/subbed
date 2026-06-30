@@ -11,7 +11,8 @@ export async function GET(request: Request) {
 
     if (!error) {
       const role = data.user?.user_metadata?.role;
-      const next = role === "instructor" ? "/onboarding/instructor" : "/dashboard";
+      const next =
+        role === "instructor" ? "/onboarding/instructor" : "/onboarding/studio";
       return NextResponse.redirect(`${origin}${next}`);
     }
   }
