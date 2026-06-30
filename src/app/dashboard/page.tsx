@@ -49,6 +49,15 @@ export default async function DashboardPage() {
           Browse instructors
         </Link>
       )}
+
+      {user.user_metadata?.role === "instructor" && (
+        <Link
+          href="/dashboard/studios"
+          className="mt-6 inline-block w-fit rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+        >
+          Browse studios
+        </Link>
+      )}
     </main>
   );
 }
