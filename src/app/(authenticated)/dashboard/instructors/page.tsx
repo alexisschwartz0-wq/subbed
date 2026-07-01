@@ -70,8 +70,10 @@ export default async function BrowseInstructorsPage({
 
   return (
     <main className="flex flex-1 flex-col px-6 py-12">
-      <h1 className="text-2xl font-semibold text-ink">Browse instructors</h1>
-      <p className="mt-2 text-sm text-ink/60">
+      <h1 className="font-heading text-2xl font-extrabold text-ink">
+        Browse instructors
+      </h1>
+      <p className="mt-2 text-sm font-light text-ink/60">
         Find instructors available for subs or long-term placements.
       </p>
 
@@ -99,7 +101,7 @@ export default async function BrowseInstructorsPage({
             {DISCIPLINES.map((d) => (
               <label
                 key={d.value}
-                className="flex items-center gap-1.5 rounded-full border border-mauve/30 px-3 py-1.5 text-sm text-ink/70 has-checked:border-mauve has-checked:bg-mauve/10 has-checked:text-ink"
+                className="flex items-center gap-1.5 rounded-full border border-mauve/30 px-3 py-1.5 text-sm text-ink/70 has-checked:border-mauve has-checked:bg-mist has-checked:text-ink"
               >
                 <input
                   type="checkbox"
@@ -159,7 +161,7 @@ export default async function BrowseInstructorsPage({
             className="rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm"
           >
             <div className="flex items-center gap-3">
-              <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-sand">
+              <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-mist">
                 {instructor.profiles?.avatar_url ? (
                   <Image
                     src={instructor.profiles.avatar_url}
@@ -192,7 +194,7 @@ export default async function BrowseInstructorsPage({
                 {instructor.specialties.map((s) => (
                   <span
                     key={s}
-                    className="rounded-full bg-mauve/10 px-2.5 py-1 text-xs font-medium text-mauve"
+                    className="rounded-full bg-mist px-2.5 py-1 text-xs font-medium text-mauve"
                   >
                     {DISCIPLINES.find((d) => d.value === s)?.label ?? s}
                   </span>
@@ -225,7 +227,7 @@ export default async function BrowseInstructorsPage({
               />
               <button
                 type="submit"
-                className="w-full rounded-full border border-mauve px-4 py-1.5 text-sm font-medium text-mauve transition-colors hover:bg-mauve/10"
+                className="w-full rounded-full border border-mauve px-4 py-1.5 text-sm font-medium text-mauve transition-colors hover:bg-mist"
               >
                 Message
               </button>

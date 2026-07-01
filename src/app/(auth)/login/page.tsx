@@ -14,8 +14,10 @@ export default async function LoginPage({
         action={login}
         className="w-full max-w-sm rounded-2xl border border-mauve/20 bg-white p-8 shadow-sm"
       >
-        <h1 className="text-2xl font-semibold text-ink">Sign in to Subbed</h1>
-        <p className="mt-2 text-sm text-ink/60">Welcome back.</p>
+        <h1 className="font-heading text-2xl font-extrabold text-ink">
+          Sign in to Subbed
+        </h1>
+        <p className="mt-2 text-sm font-light text-ink/60">Welcome back.</p>
 
         {params.error && (
           <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-rose">

@@ -60,8 +60,10 @@ export default async function MessagesPage() {
 
   return (
     <main className="flex flex-1 flex-col px-6 py-12">
-      <h1 className="text-2xl font-semibold text-ink">Messages</h1>
-      <p className="mt-2 text-sm text-ink/60">
+      <h1 className="font-heading text-2xl font-extrabold text-ink">
+        Messages
+      </h1>
+      <p className="mt-2 text-sm font-light text-ink/60">
         Conversations between you and{" "}
         {role === "studio_owner" ? "instructors" : "studios"}.
       </p>
@@ -71,9 +73,9 @@ export default async function MessagesPage() {
           <Link
             key={c.id}
             href={`/dashboard/messages/${c.id}`}
-            className="flex items-center gap-3 px-6 py-4 transition-colors hover:bg-sand"
+            className="flex items-center gap-3 px-6 py-4 transition-colors hover:bg-mist"
           >
-            <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-sand">
+            <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-mist">
               {c.avatarUrl ? (
                 <Image
                   src={c.avatarUrl}

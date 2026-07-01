@@ -49,7 +49,7 @@ export function InstructorProfileForm({
       className="mt-8 w-full max-w-xl space-y-6 rounded-2xl border border-mauve/20 bg-white p-8 shadow-sm"
     >
       <div className="flex items-center gap-4">
-        <div className="h-20 w-20 overflow-hidden rounded-full bg-sand">
+        <div className="h-20 w-20 overflow-hidden rounded-full bg-mist">
           {preview ? (
             <Image
               src={preview}
@@ -143,7 +143,9 @@ export function InstructorProfileForm({
           placeholder="RYT-200, NASM-CPT, ..."
           className="mt-1 w-full rounded-lg border border-mauve/30 px-3 py-2 text-sm focus:border-mauve focus:outline-none"
         />
-        <p className="mt-1 text-xs text-ink/50">Separate multiple certifications with commas.</p>
+        <p className="mt-1 text-xs font-light text-ink/50">
+          Separate multiple certifications with commas.
+        </p>
       </div>
 
       <div>
@@ -152,7 +154,7 @@ export function InstructorProfileForm({
           {DISCIPLINES.map((d) => (
             <label
               key={d.value}
-              className="flex items-center gap-2 rounded-full border border-mauve/30 px-3 py-1.5 text-sm text-ink/70 has-checked:border-mauve has-checked:bg-mauve/10 has-checked:text-ink"
+              className="flex items-center gap-2 rounded-full border border-mauve/30 px-3 py-1.5 text-sm text-ink/70 has-checked:border-mauve has-checked:bg-mist has-checked:text-ink"
             >
               <input
                 type="checkbox"

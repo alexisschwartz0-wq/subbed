@@ -50,7 +50,7 @@ export function StudioProfileForm({
       {studioId && <input type="hidden" name="studioId" value={studioId} />}
 
       <div className="flex items-center gap-4">
-        <div className="h-20 w-20 overflow-hidden rounded-full bg-sand">
+        <div className="h-20 w-20 overflow-hidden rounded-full bg-mist">
           {preview ? (
             <Image
               src={preview}

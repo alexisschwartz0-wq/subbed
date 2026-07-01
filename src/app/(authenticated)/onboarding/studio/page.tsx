@@ -37,10 +37,10 @@ export default async function StudioOnboardingPage({
   return (
     <main className="flex flex-1 flex-col items-center bg-sand px-6 py-16">
       <div className="w-full max-w-xl">
-        <h1 className="text-2xl font-semibold text-ink">
+        <h1 className="font-heading text-2xl font-extrabold text-ink">
           Set up your studio profile
         </h1>
-        <p className="mt-2 text-sm text-ink/60">
+        <p className="mt-2 text-sm font-light text-ink/60">
           Instructors will see this when they&apos;re looking for studios to
           sub at.
         </p>

@@ -37,8 +37,12 @@ export default async function DashboardPage() {
 
   return (
     <main className="flex flex-1 flex-col px-6 py-12">
-      <h1 className="text-2xl font-semibold text-ink">Dashboard</h1>
-      <p className="mt-2 text-sm text-ink/60">Signed in as {user.email}</p>
+      <h1 className="font-heading text-2xl font-extrabold text-ink">
+        Dashboard
+      </h1>
+      <p className="mt-2 text-sm font-light text-ink/60">
+        Signed in as {user.email}
+      </p>
     </main>
   );
 }

@@ -12,8 +12,10 @@ export default async function SignupPage({
     return (
       <main className="flex flex-1 flex-col items-center justify-center bg-sand px-6 py-24">
         <div className="w-full max-w-sm rounded-2xl border border-mauve/20 bg-white p-8 text-center shadow-sm">
-          <h1 className="text-2xl font-semibold text-ink">Check your email</h1>
-          <p className="mt-2 text-sm text-ink/60">
+          <h1 className="font-heading text-2xl font-extrabold text-ink">
+            Check your email
+          </h1>
+          <p className="mt-2 text-sm font-light text-ink/60">
             We sent a confirmation link to your inbox. Click it to activate
             your account, then sign in to finish your profile.
           </p>
@@ -36,8 +38,10 @@ export default async function SignupPage({
         action={signup}
         className="w-full max-w-sm rounded-2xl border border-mauve/20 bg-white p-8 shadow-sm"
       >
-        <h1 className="text-2xl font-semibold text-ink">Join Subbed</h1>
-        <p className="mt-2 text-sm text-ink/60">
+        <h1 className="font-heading text-2xl font-extrabold text-ink">
+          Join Subbed
+        </h1>
+        <p className="mt-2 text-sm font-light text-ink/60">
           Create your account to get started.
         </p>
 
@@ -47,7 +51,7 @@ export default async function SignupPage({
           </p>
         )}
 
-        <div className="mt-6 flex gap-1 rounded-full bg-sand p-1">
+        <div className="mt-6 flex gap-1 rounded-full bg-mist p-1">
           <label className="flex-1">
             <input
               type="radio"

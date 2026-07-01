@@ -40,8 +40,10 @@ export default async function BrowseStudiosPage({
 
   return (
     <main className="flex flex-1 flex-col px-6 py-12">
-      <h1 className="text-2xl font-semibold text-ink">Browse studios</h1>
-      <p className="mt-2 text-sm text-ink/60">
+      <h1 className="font-heading text-2xl font-extrabold text-ink">
+        Browse studios
+      </h1>
+      <p className="mt-2 text-sm font-light text-ink/60">
         Find studios looking for instructors to sub or hire long-term.
       </p>
 
@@ -98,7 +100,7 @@ export default async function BrowseStudiosPage({
             className="rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm"
           >
             <div className="flex items-center gap-3">
-              <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-sand">
+              <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full bg-mist">
                 {studio.profiles?.avatar_url ? (
                   <Image
                     src={studio.profiles.avatar_url}

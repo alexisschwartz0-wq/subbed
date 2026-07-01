@@ -55,7 +55,7 @@ export default async function ConversationPage({
     <main className="flex flex-1 flex-col px-6 py-12">
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-sand">
+          <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-mist">
             {otherParty.avatarUrl ? (
               <Image
                 src={otherParty.avatarUrl}
@@ -67,7 +67,9 @@ export default async function ConversationPage({
               />
             ) : null}
           </div>
-          <h1 className="text-xl font-semibold text-ink">{otherParty.name}</h1>
+          <h1 className="font-heading text-xl font-extrabold text-ink">
+            {otherParty.name}
+          </h1>
         </div>
 
         <div className="mt-6 flex flex-1 flex-col gap-3 rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm">
@@ -79,7 +81,7 @@ export default async function ConversationPage({
                 className={`max-w-[75%] rounded-2xl px-4 py-2 text-sm ${
                   isMine
                     ? "self-end bg-mauve text-sand"
-                    : "self-start bg-sand text-ink"
+                    : "self-start bg-mist text-ink"
                 }`}
               >
                 <p>{message.body}</p>
