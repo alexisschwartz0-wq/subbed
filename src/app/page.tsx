@@ -208,20 +208,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex flex-col justify-center gap-4 text-base font-medium sm:flex-row">
-            <Link
-              href="/signup?role=instructor"
-              className="rounded-full bg-mauve px-6 py-3 text-sand transition-colors hover:bg-rose"
-            >
-              I&apos;m an Instructor
-            </Link>
-            <Link
-              href="/signup?role=studio_owner"
-              className="rounded-full border border-mauve px-6 py-3 text-ink transition-colors hover:bg-mist"
-            >
-              I&apos;m a Studio Owner
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -265,20 +251,6 @@ export default function Home() {
               the details — no phone tag, no email chains, no third-party
               scheduling app.
             </p>
-            <div className="mt-8 flex flex-col justify-center gap-4 text-base font-medium sm:flex-row sm:justify-start">
-              <Link
-                href="/signup?role=instructor"
-                className="rounded-full bg-mauve px-6 py-3 text-sand transition-colors hover:bg-rose"
-              >
-                I&apos;m an Instructor
-              </Link>
-              <Link
-                href="/signup?role=studio_owner"
-                className="rounded-full border border-mauve px-6 py-3 text-ink transition-colors hover:bg-mist"
-              >
-                I&apos;m a Studio Owner
-              </Link>
-            </div>
           </div>
           <div className="rounded-2xl border border-mauve/20 bg-mist p-6 shadow-sm">
             <div className="flex flex-col gap-3">
@@ -302,21 +274,7 @@ export default function Home() {
           Join instructors and studio owners across Orange County using
           Subbed today.
         </p>
-        <div className="mt-8 flex flex-col justify-center gap-4 text-base font-medium sm:flex-row">
-          <Link
-            href="/signup?role=instructor"
-            className="rounded-full bg-mauve px-6 py-3 text-sand transition-colors hover:bg-rose"
-          >
-            I&apos;m an Instructor
-          </Link>
-          <Link
-            href="/signup?role=studio_owner"
-            className="rounded-full border border-sand/40 px-6 py-3 text-sand transition-colors hover:bg-sand/10"
-          >
-            I&apos;m a Studio Owner
-          </Link>
-        </div>
-        <p className="mt-6 text-sm font-light text-sand/60">
+        <p className="mt-8 text-sm font-light text-sand/60">
           Already have an account?{" "}
           <Link href="/login" className="font-medium text-rose hover:text-sand">
             Sign in
