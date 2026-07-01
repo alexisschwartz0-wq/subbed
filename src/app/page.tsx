@@ -3,6 +3,37 @@ import { Navbar } from "@/components/navbar";
 
 const DISCIPLINES = ["Yoga", "Pilates", "Sound Baths", "Group Fitness", "Barre", "Cycle"];
 
+const STATS = [
+  {
+    value: "40%",
+    label: "of wellness studios scramble to fill classes every single week",
+  },
+  {
+    value: "2 hrs",
+    label: "average time lost finding a sub through texts and DMs",
+  },
+  {
+    value: "500+",
+    label: "yoga, Pilates, and fitness studios in Orange County alone",
+  },
+];
+
+const STUDIO_BENEFITS = [
+  "Find qualified subs instantly",
+  "Browse profiles, certifications, and reviews",
+  "Post permanent and part-time positions",
+  "Build a reliable roster",
+  "One platform for subs and full hires",
+];
+
+const INSTRUCTOR_BENEFITS = [
+  "Get discovered by studios near you",
+  "Showcase all your modalities",
+  "Set availability, styles, and rates",
+  "Pick up sub opportunities",
+  "Land part-time or full-time roles",
+];
+
 const STEPS = [
   {
     title: "Create your profile",
@@ -24,18 +55,24 @@ const STEPS = [
 const HIRING_TYPES = [
   {
     title: "Last-Minute Sub",
+    tagline: "Fill it today",
     description:
       "Class starts in an hour and your instructor's out sick? Message nearby instructors directly and fill the spot fast.",
+    borderClass: "border-mauve",
   },
   {
-    title: "Part-Time",
+    title: "Part-Time Role",
+    tagline: "Build your roster",
     description:
       "Bring on a regular sub for recurring shifts without a long-term commitment.",
+    borderClass: "border-rose",
   },
   {
-    title: "Full-Time",
+    title: "Full-Time Hire",
+    tagline: "Grow your team",
     description:
       "Ready to grow your team? Find instructors looking for a long-term home at your studio.",
+    borderClass: "border-ink",
   },
 ];
 
@@ -75,6 +112,19 @@ export default function Home() {
         </div>
       </main>
 
+      <section className="bg-mauve px-6 py-16 text-center text-sand">
+        <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
+          {STATS.map((stat) => (
+            <div key={stat.label}>
+              <p className="font-heading text-5xl font-extrabold">{stat.value}</p>
+              <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-sand/80">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="disciplines" className="px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center font-heading text-3xl font-extrabold text-ink">
@@ -95,6 +145,42 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-ink px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-center font-heading text-3xl font-extrabold text-sand">
+            Built for both sides of the studio
+          </h2>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            <div className="rounded-2xl bg-mauve p-8">
+              <h3 className="font-heading text-xl font-extrabold text-sand">
+                Studio Owners
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm font-light text-sand/90">
+                {STUDIO_BENEFITS.map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sand" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-sand/30 p-8">
+              <h3 className="font-heading text-xl font-extrabold text-sand">
+                Instructors
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm font-light text-sand/90">
+                {INSTRUCTOR_BENEFITS.map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -139,7 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="hiring-types" className="px-6 py-20">
+      <section id="hiring-types" className="bg-mist px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center font-heading text-3xl font-extrabold text-ink">
             Hire the way that works for you
@@ -151,11 +237,14 @@ export default function Home() {
             {HIRING_TYPES.map((type) => (
               <div
                 key={type.title}
-                className="rounded-2xl border border-mauve/20 bg-white p-8 shadow-sm"
+                className={`rounded-2xl border-l-4 bg-white p-8 shadow-sm ${type.borderClass}`}
               >
                 <h3 className="font-heading text-xl font-extrabold text-ink">
                   {type.title}
                 </h3>
+                <p className="mt-1 text-sm font-medium text-mauve">
+                  {type.tagline}
+                </p>
                 <p className="mt-3 text-sm font-light text-ink/70">
                   {type.description}
                 </p>
@@ -165,7 +254,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="messaging" className="bg-mist px-6 py-20">
+      <section id="messaging" className="bg-white px-6 py-20">
         <div className="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2">
           <div className="text-center sm:text-left">
             <h2 className="font-heading text-3xl font-extrabold text-ink">
@@ -185,15 +274,15 @@ export default function Home() {
               </Link>
               <Link
                 href="/signup?role=studio_owner"
-                className="rounded-full border border-mauve px-6 py-3 text-ink transition-colors hover:bg-white"
+                className="rounded-full border border-mauve px-6 py-3 text-ink transition-colors hover:bg-mist"
               >
                 I&apos;m a Studio Owner
               </Link>
             </div>
           </div>
-          <div className="rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm">
+          <div className="rounded-2xl border border-mauve/20 bg-mist p-6 shadow-sm">
             <div className="flex flex-col gap-3">
-              <div className="max-w-[80%] self-start rounded-2xl bg-mist px-4 py-2 text-left text-sm text-ink">
+              <div className="max-w-[80%] self-start rounded-2xl bg-white px-4 py-2 text-left text-sm text-ink">
                 Hi! Do you have availability to sub Tuesday&apos;s 6am
                 vinyasa?
               </div>
@@ -205,11 +294,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-24 text-center">
-        <h2 className="font-heading text-3xl font-extrabold text-ink">
-          Ready to fill your next class?
+      <section className="bg-ink px-6 py-24 text-center">
+        <h2 className="font-heading text-4xl font-extrabold text-sand sm:text-5xl">
+          Be first in OC.
         </h2>
-        <p className="mx-auto mt-3 max-w-xl font-light text-ink/70">
+        <p className="mx-auto mt-4 max-w-xl font-light text-sand/70">
           Join instructors and studio owners across Orange County using
           Subbed today.
         </p>
@@ -222,18 +311,28 @@ export default function Home() {
           </Link>
           <Link
             href="/signup?role=studio_owner"
-            className="rounded-full border border-mauve px-6 py-3 text-ink transition-colors hover:bg-mist"
+            className="rounded-full border border-sand/40 px-6 py-3 text-sand transition-colors hover:bg-sand/10"
           >
             I&apos;m a Studio Owner
           </Link>
         </div>
-        <p className="mt-6 text-sm font-light text-ink/60">
+        <p className="mt-6 text-sm font-light text-sand/60">
           Already have an account?{" "}
-          <Link href="/login" className="font-medium text-mauve hover:text-rose">
+          <Link href="/login" className="font-medium text-rose hover:text-sand">
             Sign in
           </Link>
         </p>
       </section>
+
+      <footer className="border-t border-sand/10 bg-ink px-6 py-10 text-center">
+        <p className="font-heading text-lg font-extrabold">
+          <span className="text-sand">Sub</span>
+          <span className="text-mauve/70">bed</span>
+        </p>
+        <p className="mt-2 text-xs font-light text-sand/50">
+          © 2026 Subbed. Orange County, CA.
+        </p>
+      </footer>
     </div>
   );
 }
