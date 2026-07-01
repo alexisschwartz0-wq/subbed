@@ -112,19 +112,6 @@ export default function Home() {
         </div>
       </main>
 
-      <section className="bg-mauve px-6 py-16 text-center text-sand">
-        <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
-          {STATS.map((stat) => (
-            <div key={stat.label}>
-              <p className="font-heading text-5xl font-extrabold">{stat.value}</p>
-              <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-sand/80">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section id="disciplines" className="px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center font-heading text-3xl font-extrabold text-ink">
@@ -182,6 +169,19 @@ export default function Home() {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-mauve px-6 py-16 text-center text-sand">
+        <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
+          {STATS.map((stat) => (
+            <div key={stat.label}>
+              <p className="font-heading text-5xl font-extrabold">{stat.value}</p>
+              <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-sand/80">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -324,12 +324,12 @@ export default function Home() {
         </p>
       </section>
 
-      <footer className="border-t border-sand/10 bg-ink px-6 py-10 text-center">
+      <footer className="border-t border-sand/10 bg-mauve px-6 py-10 text-center">
         <p className="font-heading text-lg font-extrabold">
           <span className="text-sand">Sub</span>
-          <span className="text-mauve/70">bed</span>
+          <span className="text-sand/70">bed</span>
         </p>
-        <p className="mt-2 text-xs font-light text-sand/50">
+        <p className="mt-2 text-xs font-light text-sand/70">
           © 2026 Subbed. Orange County, CA.
         </p>
       </footer>
