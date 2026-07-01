@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { saveStudioProfile } from "@/app/onboarding/studio/actions";
+import { saveStudioProfile } from "@/app/(authenticated)/onboarding/studio/actions";
 
 const STATES = ["CA", "AZ", "NV", "OR", "WA"];
 

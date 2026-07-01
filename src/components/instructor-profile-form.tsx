@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { saveInstructorProfile } from "@/app/onboarding/instructor/actions";
+import { saveInstructorProfile } from "@/app/(authenticated)/onboarding/instructor/actions";
 
 const DISCIPLINES: { value: string; label: string }[] = [
   { value: "yoga", label: "Yoga" },
