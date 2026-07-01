@@ -84,7 +84,7 @@ export default function Home() {
         <p className="mb-4 rounded-full bg-mist px-4 py-1.5 text-sm font-medium uppercase tracking-widest text-rose">
           Orange County
         </p>
-        <h1 className="max-w-2xl font-heading text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
+        <h1 className="max-w-2xl font-heading text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
           Find your sub. Fill your class.
         </h1>
         <p className="mt-6 max-w-xl text-lg font-light leading-7 text-ink/70">
@@ -114,20 +114,20 @@ export default function Home() {
 
       <section id="disciplines" className="px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center font-heading text-3xl font-extrabold text-ink">
+          <h2 className="text-center font-heading text-2xl font-extrabold text-ink sm:text-3xl">
             Every discipline, one platform.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center font-light text-ink/70">
             Whatever you teach, studios across Orange County are looking for
             someone just like you.
           </p>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
             {DISCIPLINES.map((discipline) => (
               <div
                 key={discipline}
-                className="rounded-2xl border border-mauve/20 bg-white px-6 py-8 text-center shadow-sm"
+                className="rounded-2xl border border-mauve/20 bg-white px-3 py-5 text-center shadow-sm sm:px-6 sm:py-8"
               >
-                <p className="font-heading text-lg font-extrabold text-ink">
+                <p className="font-heading text-sm leading-tight font-extrabold whitespace-nowrap text-ink sm:text-lg sm:whitespace-normal">
                   {discipline}
                 </p>
               </div>
@@ -138,12 +138,12 @@ export default function Home() {
 
       <section className="bg-ink px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center font-heading text-3xl font-extrabold text-sand">
+          <h2 className="text-center font-heading text-2xl font-extrabold text-sand sm:text-3xl">
             Built for both sides of the studio
           </h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            <div className="rounded-2xl bg-mauve p-8">
-              <h3 className="font-heading text-xl font-extrabold text-sand">
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6">
+            <div className="rounded-2xl bg-mauve p-6 sm:p-8">
+              <h3 className="font-heading text-lg font-extrabold text-sand sm:text-xl">
                 Studio Owners
               </h3>
               <ul className="mt-4 space-y-2 text-sm font-light text-sand/90">
@@ -155,8 +155,8 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border border-sand/30 p-8">
-              <h3 className="font-heading text-xl font-extrabold text-sand">
+            <div className="rounded-2xl border border-sand/30 p-6 sm:p-8">
+              <h3 className="font-heading text-lg font-extrabold text-sand sm:text-xl">
                 Instructors
               </h3>
               <ul className="mt-4 space-y-2 text-sm font-light text-sand/90">
@@ -176,7 +176,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
           {STATS.map((stat) => (
             <div key={stat.label}>
-              <p className="font-heading text-5xl font-extrabold">{stat.value}</p>
+              <p className="font-heading text-4xl font-extrabold sm:text-5xl">{stat.value}</p>
               <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-sand/80">
                 {stat.label}
               </p>
@@ -187,7 +187,7 @@ export default function Home() {
 
       <section id="how-it-works" className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-center font-heading text-3xl font-extrabold text-ink">
+          <h2 className="text-center font-heading text-2xl font-extrabold text-ink sm:text-3xl">
             How Subbed works
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center font-light text-ink/70">
@@ -213,7 +213,7 @@ export default function Home() {
 
       <section id="hiring-types" className="bg-mist px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center font-heading text-3xl font-extrabold text-ink">
+          <h2 className="text-center font-heading text-2xl font-extrabold text-ink sm:text-3xl">
             Hire the way that works for you
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center font-light text-ink/70">
@@ -225,7 +225,7 @@ export default function Home() {
                 key={type.title}
                 className={`rounded-2xl border-l-4 bg-white p-8 shadow-sm ${type.borderClass}`}
               >
-                <h3 className="font-heading text-xl font-extrabold text-ink">
+                <h3 className="font-heading text-lg font-extrabold text-ink sm:text-xl">
                   {type.title}
                 </h3>
                 <p className="mt-1 text-sm font-medium text-mauve">
@@ -243,7 +243,7 @@ export default function Home() {
       <section id="messaging" className="bg-white px-6 py-20">
         <div className="mx-auto grid max-w-5xl items-center gap-10 sm:grid-cols-2">
           <div className="text-center sm:text-left">
-            <h2 className="font-heading text-3xl font-extrabold text-ink">
+            <h2 className="font-heading text-2xl font-extrabold text-ink sm:text-3xl">
               Message directly, no middleman
             </h2>
             <p className="mt-3 font-light text-ink/70">
@@ -267,7 +267,7 @@ export default function Home() {
       </section>
 
       <section className="bg-ink px-6 py-24 text-center">
-        <h2 className="font-heading text-4xl font-extrabold text-sand sm:text-5xl">
+        <h2 className="font-heading text-3xl font-extrabold text-sand sm:text-5xl">
           Be first in OC.
         </h2>
         <p className="mx-auto mt-4 max-w-xl font-light text-sand/70">
