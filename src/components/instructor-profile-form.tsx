@@ -46,10 +46,10 @@ export function InstructorProfileForm({
   return (
     <form
       action={saveInstructorProfile}
-      className="mt-8 w-full max-w-xl space-y-6 rounded-2xl border border-mauve/20 bg-white p-8 shadow-sm"
+      className="mt-8 w-full max-w-xl space-y-6 rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm sm:p-8"
     >
-      <div className="flex items-center gap-4">
-        <div className="h-20 w-20 overflow-hidden rounded-full bg-mist">
+      <div className="flex flex-wrap items-center gap-3 sm:flex-nowrap sm:gap-4">
+        <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-mist sm:h-20 sm:w-20">
           {preview ? (
             <Image
               src={preview}
@@ -61,7 +61,7 @@ export function InstructorProfileForm({
             />
           ) : null}
         </div>
-        <div>
+        <div className="min-w-0 flex-1">
           <label htmlFor="photo" className="block text-sm font-medium text-ink">
             Photo
           </label>
@@ -71,7 +71,7 @@ export function InstructorProfileForm({
             type="file"
             accept="image/*"
             onChange={onPhotoChange}
-            className="mt-1 text-sm text-ink/70 file:mr-3 file:rounded-full file:border-0 file:bg-mauve file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-sand hover:file:bg-rose"
+            className="mt-1 w-full text-sm text-ink/70 file:mr-3 file:rounded-full file:border-0 file:bg-mauve file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-sand hover:file:bg-rose"
           />
         </div>
       </div>
@@ -104,7 +104,7 @@ export function InstructorProfileForm({
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="city" className="block text-sm font-medium text-ink">
             City
