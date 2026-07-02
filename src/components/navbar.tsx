@@ -10,22 +10,22 @@ export function Navbar() {
         >
           Subbed
         </Link>
-        <nav className="flex items-center gap-6 text-sm font-medium text-ink/70">
+        <nav className="flex items-center gap-2 text-sm font-medium text-ink/70 sm:gap-6">
           <Link
             href="/#instructors"
-            className="rounded-full px-3 py-1.5 transition-colors hover:bg-mist hover:text-ink"
+            className="hidden rounded-full px-3 py-1.5 transition-colors hover:bg-mist hover:text-ink sm:inline-block"
           >
             For Instructors
           </Link>
           <Link
             href="/#studios"
-            className="rounded-full px-3 py-1.5 transition-colors hover:bg-mist hover:text-ink"
+            className="hidden rounded-full px-3 py-1.5 transition-colors hover:bg-mist hover:text-ink sm:inline-block"
           >
             For Studios
           </Link>
           <Link
             href="/login"
-            className="rounded-full bg-mauve px-4 py-2 text-sand transition-colors hover:bg-rose"
+            className="rounded-full bg-mauve px-3 py-1.5 text-sand transition-colors hover:bg-rose sm:px-4 sm:py-2"
           >
             Sign In
           </Link>
