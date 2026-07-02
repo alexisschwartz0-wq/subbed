@@ -32,6 +32,12 @@ export default async function AuthenticatedLayout({
           </Link>
           <nav className="flex flex-wrap items-center gap-1 text-xs font-medium text-ink/70 sm:gap-6 sm:text-sm">
             <Link
+              href="/dashboard/profile"
+              className="rounded-full px-2 py-1 transition-colors hover:bg-mist hover:text-ink sm:px-3 sm:py-1.5"
+            >
+              My Profile
+            </Link>
+            <Link
               href="/about"
               className="rounded-full px-2 py-1 transition-colors hover:bg-mist hover:text-ink sm:px-3 sm:py-1.5"
             >

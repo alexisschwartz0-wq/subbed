@@ -90,5 +90,5 @@ export async function saveInstructorProfile(formData: FormData) {
     );
   }
 
-  redirect("/dashboard");
+  redirect("/dashboard/profile");
 }

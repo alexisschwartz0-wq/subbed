@@ -83,5 +83,5 @@ export async function saveStudioProfile(formData: FormData) {
     );
   }
 
-  redirect("/dashboard");
+  redirect("/dashboard/profile");
 }
