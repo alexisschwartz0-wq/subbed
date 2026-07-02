@@ -6,14 +6,14 @@ export function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="font-heading text-xl font-extrabold tracking-tight text-ink"
+          className="font-heading text-lg font-extrabold tracking-tight text-ink sm:text-xl"
         >
           Subbed
         </Link>
-        <nav className="flex items-center gap-2 text-sm font-medium text-ink/70 sm:gap-6">
+        <nav className="flex items-center gap-1 text-xs font-medium text-ink/70 sm:gap-6 sm:text-sm">
           <Link
             href="/about"
-            className="hidden rounded-full px-3 py-1.5 transition-colors hover:bg-mist hover:text-ink sm:inline-block"
+            className="rounded-full px-2 py-1.5 transition-colors hover:bg-mist hover:text-ink sm:px-3"
           >
             About
           </Link>
