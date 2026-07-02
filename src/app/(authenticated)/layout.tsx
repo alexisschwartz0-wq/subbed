@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { signOut } from "./actions";
+import { Footer } from "@/components/footer";
 
 export default async function AuthenticatedLayout({
   children,
@@ -70,6 +71,7 @@ export default async function AuthenticatedLayout({
         </div>
       </header>
       {children}
+      <Footer />
     </div>
   );
 }
