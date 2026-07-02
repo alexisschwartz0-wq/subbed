@@ -121,13 +121,13 @@ export default function Home() {
             Whatever you teach, studios across Orange County are looking for
             someone just like you.
           </p>
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+          <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-4">
             {DISCIPLINES.map((discipline) => (
               <div
                 key={discipline}
-                className="rounded-2xl border border-mauve/20 bg-white px-3 py-5 text-center shadow-sm sm:px-6 sm:py-8"
+                className="rounded-2xl border border-mauve/20 bg-white px-2 py-5 text-center shadow-sm sm:px-6 sm:py-8"
               >
-                <p className="font-heading text-sm leading-tight font-extrabold whitespace-nowrap text-ink sm:text-lg sm:whitespace-normal">
+                <p className="font-heading text-[10px] leading-tight font-extrabold whitespace-nowrap text-ink sm:text-lg sm:whitespace-normal">
                   {discipline}
                 </p>
               </div>

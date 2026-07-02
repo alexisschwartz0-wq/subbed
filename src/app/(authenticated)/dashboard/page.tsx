@@ -40,7 +40,7 @@ export default async function DashboardPage() {
       <h1 className="font-heading text-2xl font-extrabold text-ink">
         Dashboard
       </h1>
-      <p className="mt-2 text-sm font-light text-ink/60">
+      <p className="mt-2 text-sm font-light break-all text-ink/60">
         Signed in as {user.email}
       </p>
     </main>
