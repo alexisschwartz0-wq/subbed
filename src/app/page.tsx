@@ -15,7 +15,7 @@ const STATS = [
   },
   {
     value: "500+",
-    label: "yoga, Pilates, and fitness studios in Orange County alone",
+    label: "yoga, Pilates, and fitness studios ready to connect",
   },
 ];
 
@@ -83,15 +83,14 @@ export default function Home() {
       <Navbar />
       <main className="flex flex-1 flex-col items-center justify-center px-6 py-24 text-center">
         <p className="mb-4 rounded-full bg-mist px-4 py-1.5 text-sm font-medium uppercase tracking-widest text-rose">
-          Orange County
+          For Studios &amp; Instructors
         </p>
         <h1 className="max-w-2xl font-heading text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
           Find your sub. Fill your class.
         </h1>
         <p className="mt-6 max-w-xl text-lg font-light leading-7 text-ink/70">
           Subbed connects yoga, Pilates, sound bath, and fitness instructors
-          with studio owners across Orange County — for last-minute subs and
-          long-term hiring.
+          with studio owners — for last-minute subs and long-term hiring.
         </p>
         <div
           id="instructors"
@@ -119,8 +118,8 @@ export default function Home() {
             Every discipline, one platform.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center font-light text-ink/70">
-            Whatever you teach, studios across Orange County are looking for
-            someone just like you.
+            Whatever you teach, studios everywhere are looking for someone
+            just like you.
           </p>
           <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-4">
             {DISCIPLINES.map((discipline) => (
@@ -269,11 +268,10 @@ export default function Home() {
 
       <section className="bg-ink px-6 py-24 text-center">
         <h2 className="font-heading text-3xl font-extrabold text-sand sm:text-5xl">
-          Be first in OC.
+          Be first on Subbed.
         </h2>
         <p className="mx-auto mt-4 max-w-xl font-light text-sand/70">
-          Join instructors and studio owners across Orange County using
-          Subbed today.
+          Join instructors and studio owners using Subbed today.
         </p>
         <p className="mt-8 text-sm font-light text-sand/60">
           Already have an account?{" "}

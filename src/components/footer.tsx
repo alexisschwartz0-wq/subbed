@@ -16,7 +16,7 @@ export function Footer() {
         </Link>
       </nav>
       <p className="mt-3 text-xs font-light text-sand/70">
-        © 2026 Subbed. Orange County, CA.
+        © 2026 Subbed.
       </p>
     </footer>
   );

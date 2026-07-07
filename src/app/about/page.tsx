@@ -36,9 +36,9 @@ const FOUNDERS = [
 ];
 
 const STATS = [
-  { value: "500+", label: "yoga, Pilates and fitness studios in OC" },
+  { value: "500+", label: "yoga, Pilates and fitness studios ready to connect" },
   { value: "30+", label: "years of combined industry experience behind Subbed" },
-  { value: "1", label: "platform connecting it all, built right here in OC" },
+  { value: "1", label: "platform, starting here and built for everywhere" },
 ];
 
 export default function About() {
@@ -158,16 +158,16 @@ export default function About() {
           </h2>
           <div className="mt-6 space-y-4 font-light leading-7 text-ink/70">
             <p>
-              We&apos;re not trying to boil the ocean. OC is our home, our
-              community, and our backyard. We know the studios, we know the
-              instructors, and we know the culture. Starting here means we
-              can do it right — and every early member gets our full
-              attention and care.
+              We&apos;re starting in Orange County — deliberately. It&apos;s
+              our home, our community, and our backyard. We know the
+              studios, we know the instructors, and we know the culture.
+              Starting here means we can do it right, with the care and
+              attention every early member deserves.
             </p>
             <p>
-              This is a community product, built for a community
-              we&apos;re already part of. That&apos;s not a strategy.
-              That&apos;s just the truth.
+              But this is just the beginning. Every city has studios and
+              instructors who deserve a better way to find each other —
+              Orange County is where Subbed starts, not where it stops.
             </p>
           </div>
         </div>

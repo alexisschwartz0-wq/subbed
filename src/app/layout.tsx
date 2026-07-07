@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Subbed | Find & Book Yoga, Pilates, Sound Bath, and Fitness Subs",
   description:
-    "Subbed connects Orange County yoga, Pilates, sound bath, and fitness instructors with studio owners for last-minute subs and long-term hiring.",
+    "Subbed connects yoga, Pilates, sound bath, and fitness instructors with studio owners for last-minute subs and long-term hiring.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
