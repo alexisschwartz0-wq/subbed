@@ -14,8 +14,15 @@ export function createAdminClient() {
 }
 
 export async function getUserEmail(userId: string): Promise<string | null> {
-  const admin = createAdminClient();
-  const { data, error } = await admin.auth.admin.getUserById(userId);
-  if (error || !data.user) return null;
-  return data.user.email ?? null;
+  // Notifications are a progressive enhancement — a missing/invalid
+  // service role key should never take down the flow that triggers them.
+  try {
+    const admin = createAdminClient();
+    const { data, error } = await admin.auth.admin.getUserById(userId);
+    if (error || !data.user) return null;
+    return data.user.email ?? null;
+  } catch (err) {
+    console.error("getUserEmail failed:", err);
+    return null;
+  }
 }
