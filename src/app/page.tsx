@@ -277,7 +277,7 @@ export default function Home() {
         </p>
         <p className="mt-8 text-sm font-light text-white/60">
           Already have an account?{" "}
-          <Link href="/login" className="font-medium text-ink hover:text-white">
+          <Link href="/login" className="font-medium text-white hover:text-mauve">
             Sign in
           </Link>
         </p>

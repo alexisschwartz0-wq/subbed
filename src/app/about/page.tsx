@@ -35,12 +35,6 @@ const FOUNDERS = [
   },
 ];
 
-const STATS = [
-  { value: "500+", label: "yoga, Pilates and fitness studios ready to connect" },
-  { value: "30+", label: "years of combined industry experience behind Subbed" },
-  { value: "1", label: "platform, starting here and built for everywhere" },
-];
-
 export default function About() {
   return (
     <div className="flex flex-1 flex-col">
@@ -170,21 +164,6 @@ export default function About() {
               Orange County is where Subbed starts, not where it stops.
             </p>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-mauve px-6 py-16 text-center text-white">
-        <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
-          {STATS.map((stat) => (
-            <div key={stat.label}>
-              <p className="font-heading text-4xl font-extrabold sm:text-5xl">
-                {stat.value}
-              </p>
-              <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-white/80">
-                {stat.label}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 
