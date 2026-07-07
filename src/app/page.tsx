@@ -6,16 +6,18 @@ const DISCIPLINES = ["Yoga", "Pilates", "Sound Baths", "Group Fitness", "Barre",
 
 const STATS = [
   {
-    value: "40%",
-    label: "of wellness studios scramble to fill classes every single week",
+    value: "100,000+",
+    label: "fitness and wellness studios across the United States",
   },
   {
-    value: "2 hrs",
-    label: "average time lost finding a sub through texts and DMs",
+    value: "0",
+    label:
+      "dedicated platforms for instructor hiring and subbing — before Subbed",
   },
   {
-    value: "500+",
-    label: "yoga, Pilates, and fitness studios ready to connect",
+    value: "$40B+",
+    label:
+      "fitness industry — and Subbed is the first platform built exclusively for it",
   },
 ];
 
