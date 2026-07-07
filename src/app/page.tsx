@@ -82,7 +82,7 @@ export default function Home() {
     <div className="flex flex-1 flex-col">
       <Navbar />
       <main className="flex flex-1 flex-col items-center justify-center px-6 py-24 text-center">
-        <p className="mb-4 rounded-full bg-mist px-4 py-1.5 text-sm font-medium uppercase tracking-widest text-rose">
+        <p className="mb-4 rounded-full bg-mist px-4 py-1.5 text-sm font-medium uppercase tracking-widest text-ink">
           For Studios &amp; Instructors
         </p>
         <h1 className="max-w-2xl font-heading text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
@@ -98,7 +98,7 @@ export default function Home() {
         >
           <Link
             href="/signup?role=instructor"
-            className="rounded-full bg-mauve px-6 py-3 text-sand transition-colors hover:bg-rose"
+            className="rounded-full bg-mauve px-6 py-3 text-white transition-colors hover:bg-rose"
           >
             I&apos;m an Instructor
           </Link>
@@ -138,28 +138,28 @@ export default function Home() {
 
       <section className="bg-ink px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center font-heading text-2xl font-extrabold text-sand sm:text-3xl">
+          <h2 className="text-center font-heading text-2xl font-extrabold text-white sm:text-3xl">
             Built for both sides of the studio
           </h2>
           <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6">
             <div className="rounded-2xl bg-mauve p-6 sm:p-8">
-              <h3 className="font-heading text-lg font-extrabold text-sand sm:text-xl">
+              <h3 className="font-heading text-lg font-extrabold text-white sm:text-xl">
                 Studio Owners
               </h3>
-              <ul className="mt-4 space-y-2 text-sm font-light text-sand/90">
+              <ul className="mt-4 space-y-2 text-sm font-light text-white/90">
                 {STUDIO_BENEFITS.map((benefit) => (
                   <li key={benefit} className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sand" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
                     <span>{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="rounded-2xl border border-sand/30 p-6 sm:p-8">
-              <h3 className="font-heading text-lg font-extrabold text-sand sm:text-xl">
+              <h3 className="font-heading text-lg font-extrabold text-white sm:text-xl">
                 Instructors
               </h3>
-              <ul className="mt-4 space-y-2 text-sm font-light text-sand/90">
+              <ul className="mt-4 space-y-2 text-sm font-light text-white/90">
                 {INSTRUCTOR_BENEFITS.map((benefit) => (
                   <li key={benefit} className="flex items-start gap-2">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose" />
@@ -172,12 +172,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-mauve px-6 py-16 text-center text-sand">
+      <section className="bg-mauve px-6 py-16 text-center text-white">
         <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
           {STATS.map((stat) => (
             <div key={stat.label}>
               <p className="font-heading text-4xl font-extrabold sm:text-5xl">{stat.value}</p>
-              <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-sand/80">
+              <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-white/80">
                 {stat.label}
               </p>
             </div>
@@ -196,7 +196,7 @@ export default function Home() {
           <div className="mt-12 grid gap-10 sm:grid-cols-3">
             {STEPS.map((step, index) => (
               <div key={step.title}>
-                <span className="font-heading text-4xl font-extrabold text-mauve">
+                <span className="font-heading text-4xl font-extrabold text-ink">
                   {index + 1}
                 </span>
                 <h3 className="mt-3 font-heading text-lg font-extrabold text-ink">
@@ -228,7 +228,7 @@ export default function Home() {
                 <h3 className="font-heading text-lg font-extrabold text-ink sm:text-xl">
                   {type.title}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-mauve">
+                <p className="mt-1 text-sm font-medium text-ink">
                   {type.tagline}
                 </p>
                 <p className="mt-3 text-sm font-light text-ink/70">
@@ -258,7 +258,7 @@ export default function Home() {
                 Hi! Do you have availability to sub Tuesday&apos;s 6am
                 vinyasa?
               </div>
-              <div className="max-w-[80%] self-end rounded-2xl bg-mauve px-4 py-2 text-left text-sm text-sand">
+              <div className="max-w-[80%] self-end rounded-2xl bg-mauve px-4 py-2 text-left text-sm text-white">
                 Yes, I&apos;m free! I can be there.
               </div>
             </div>
@@ -267,15 +267,15 @@ export default function Home() {
       </section>
 
       <section className="bg-ink px-6 py-24 text-center">
-        <h2 className="font-heading text-3xl font-extrabold text-sand sm:text-5xl">
+        <h2 className="font-heading text-3xl font-extrabold text-white sm:text-5xl">
           Be first on Subbed.
         </h2>
-        <p className="mx-auto mt-4 max-w-xl font-light text-sand/70">
+        <p className="mx-auto mt-4 max-w-xl font-light text-white/70">
           Join instructors and studio owners using Subbed today.
         </p>
-        <p className="mt-8 text-sm font-light text-sand/60">
+        <p className="mt-8 text-sm font-light text-white/60">
           Already have an account?{" "}
-          <Link href="/login" className="font-medium text-rose hover:text-sand">
+          <Link href="/login" className="font-medium text-ink hover:text-white">
             Sign in
           </Link>
         </p>

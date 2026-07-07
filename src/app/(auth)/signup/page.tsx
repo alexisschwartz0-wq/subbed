@@ -23,7 +23,7 @@ export default async function SignupPage({
             </p>
             <Link
               href="/login"
-              className="mt-6 inline-block rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+              className="mt-6 inline-block rounded-full bg-mauve px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rose"
             >
               Go to sign in
             </Link>
@@ -51,7 +51,7 @@ export default async function SignupPage({
           </p>
 
           {params.error && (
-            <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-rose">
+            <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-ink">
               {params.error}
             </p>
           )}
@@ -65,7 +65,7 @@ export default async function SignupPage({
                 defaultChecked={defaultRole === "instructor"}
                 className="peer sr-only"
               />
-              <span className="block cursor-pointer rounded-full px-3 py-2 text-center text-sm font-medium text-ink/60 peer-checked:bg-mauve peer-checked:text-sand">
+              <span className="block cursor-pointer rounded-full px-3 py-2 text-center text-sm font-medium text-ink/60 peer-checked:bg-mauve peer-checked:text-white">
                 Instructor
               </span>
             </label>
@@ -77,7 +77,7 @@ export default async function SignupPage({
                 defaultChecked={defaultRole === "studio_owner"}
                 className="peer sr-only"
               />
-              <span className="block cursor-pointer rounded-full px-3 py-2 text-center text-sm font-medium text-ink/60 peer-checked:bg-mauve peer-checked:text-sand">
+              <span className="block cursor-pointer rounded-full px-3 py-2 text-center text-sm font-medium text-ink/60 peer-checked:bg-mauve peer-checked:text-white">
                 Studio Owner
               </span>
             </label>
@@ -125,14 +125,14 @@ export default async function SignupPage({
 
           <button
             type="submit"
-            className="mt-6 w-full rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+            className="mt-6 w-full rounded-full bg-mauve px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rose"
           >
             Create account
           </button>
 
           <p className="mt-4 text-center text-sm text-ink/60">
             Already have an account?{" "}
-            <Link href="/login" className="font-medium text-mauve hover:text-rose">
+            <Link href="/login" className="font-medium text-ink hover:text-rose">
               Sign in
             </Link>
           </p>

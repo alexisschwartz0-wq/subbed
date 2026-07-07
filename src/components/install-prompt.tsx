@@ -78,7 +78,7 @@ export function InstallPrompt() {
         {state.kind === "android" && (
           <button
             onClick={install}
-            className="rounded-full bg-mauve px-3 py-1.5 text-xs font-medium text-sand transition-colors hover:bg-rose"
+            className="rounded-full bg-mauve px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-rose"
           >
             Install
           </button>

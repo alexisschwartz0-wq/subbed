@@ -68,7 +68,7 @@ export default async function AuthenticatedLayout({
             <form action={signOut}>
               <button
                 type="submit"
-                className="rounded-full border border-mauve px-2 py-1 text-xs font-medium text-mauve transition-colors hover:bg-mist sm:px-4 sm:py-1.5 sm:text-sm"
+                className="rounded-full border border-mauve px-2 py-1 text-xs font-medium text-ink transition-colors hover:bg-mist sm:px-4 sm:py-1.5 sm:text-sm"
               >
                 Sign out
               </button>

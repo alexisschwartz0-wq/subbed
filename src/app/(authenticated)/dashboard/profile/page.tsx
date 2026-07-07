@@ -50,7 +50,7 @@ export default async function MyProfilePage() {
             </h1>
             <Link
               href="/onboarding/instructor"
-              className="rounded-full border border-mauve px-4 py-1.5 text-sm font-medium text-mauve transition-colors hover:bg-mist"
+              className="rounded-full border border-mauve px-4 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-mist"
             >
               Edit profile
             </Link>
@@ -94,7 +94,7 @@ export default async function MyProfilePage() {
                 {instructor.specialties.map((s) => (
                   <span
                     key={s}
-                    className="rounded-full bg-mist px-2.5 py-1 text-xs font-medium text-mauve"
+                    className="rounded-full bg-mist px-2.5 py-1 text-xs font-medium text-ink"
                   >
                     {DISCIPLINE_LABELS[s] ?? s}
                   </span>
@@ -155,7 +155,7 @@ export default async function MyProfilePage() {
             </h1>
             <Link
               href="/onboarding/studio"
-              className="rounded-full border border-mauve px-4 py-1.5 text-sm font-medium text-mauve transition-colors hover:bg-mist"
+              className="rounded-full border border-mauve px-4 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-mist"
             >
               Edit profile
             </Link>
@@ -218,7 +218,7 @@ export default async function MyProfilePage() {
                   href={studio.website_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-mauve hover:text-rose"
+                  className="font-medium text-ink hover:text-rose"
                 >
                   Website
                 </a>

@@ -142,14 +142,14 @@ export default async function BrowseInstructorsPage({
 
         <button
           type="submit"
-          className="rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+          className="rounded-full bg-mauve px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rose"
         >
           Search
         </button>
       </form>
 
       {error && (
-        <p className="mt-6 rounded-lg bg-rose/10 px-3 py-2 text-sm text-rose">
+        <p className="mt-6 rounded-lg bg-rose/10 px-3 py-2 text-sm text-ink">
           {error.message}
         </p>
       )}
@@ -194,7 +194,7 @@ export default async function BrowseInstructorsPage({
                 {instructor.specialties.map((s) => (
                   <span
                     key={s}
-                    className="rounded-full bg-mist px-2.5 py-1 text-xs font-medium text-mauve"
+                    className="rounded-full bg-mist px-2.5 py-1 text-xs font-medium text-ink"
                   >
                     {DISCIPLINES.find((d) => d.value === s)?.label ?? s}
                   </span>
@@ -227,7 +227,7 @@ export default async function BrowseInstructorsPage({
               />
               <button
                 type="submit"
-                className="w-full rounded-full border border-mauve px-4 py-1.5 text-sm font-medium text-mauve transition-colors hover:bg-mist"
+                className="w-full rounded-full border border-mauve px-4 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-mist"
               >
                 Message
               </button>

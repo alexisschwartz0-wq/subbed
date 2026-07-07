@@ -47,7 +47,7 @@ export default function About() {
       <Navbar />
 
       <main className="flex flex-1 flex-col items-center px-6 py-24 text-center">
-        <p className="mb-4 rounded-full bg-mist px-4 py-1.5 text-sm font-medium uppercase tracking-widest text-rose">
+        <p className="mb-4 rounded-full bg-mist px-4 py-1.5 text-sm font-medium uppercase tracking-widest text-ink">
           Our story
         </p>
         <h1 className="max-w-2xl font-heading text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
@@ -115,7 +115,7 @@ export default function About() {
       </section>
 
       <section className="bg-ink px-6 py-24 text-center">
-        <p className="mx-auto max-w-2xl font-heading text-xl leading-snug font-extrabold text-sand italic sm:text-3xl">
+        <p className="mx-auto max-w-2xl font-heading text-xl leading-snug font-extrabold text-white italic sm:text-3xl">
           &ldquo;To make it effortless for wellness studios and instructors
           to find each other — for the class that starts in an hour, and
           the career that lasts a lifetime.&rdquo;
@@ -133,13 +133,13 @@ export default function About() {
                 key={founder.name}
                 className="rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm sm:p-8"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-mist font-heading text-lg font-extrabold text-mauve">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-mist font-heading text-lg font-extrabold text-ink">
                   {founder.initials}
                 </div>
                 <h3 className="mt-4 font-heading text-lg font-extrabold text-ink sm:text-xl">
                   {founder.name}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-mauve">
+                <p className="mt-1 text-sm font-medium text-ink">
                   {founder.title}
                 </p>
                 <p className="mt-3 text-sm font-light leading-6 text-ink/70">
@@ -173,14 +173,14 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-mauve px-6 py-16 text-center text-sand">
+      <section className="bg-mauve px-6 py-16 text-center text-white">
         <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
           {STATS.map((stat) => (
             <div key={stat.label}>
               <p className="font-heading text-4xl font-extrabold sm:text-5xl">
                 {stat.value}
               </p>
-              <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-sand/80">
+              <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-white/80">
                 {stat.label}
               </p>
             </div>
@@ -189,17 +189,17 @@ export default function About() {
       </section>
 
       <section className="bg-ink px-6 py-24 text-center">
-        <h2 className="font-heading text-3xl font-extrabold text-sand sm:text-5xl">
+        <h2 className="font-heading text-3xl font-extrabold text-white sm:text-5xl">
           Ready to be part of it?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl font-light text-sand/70">
+        <p className="mx-auto mt-4 max-w-xl font-light text-white/70">
           Whether you&apos;re a studio owner looking for great instructors
           or a teacher ready to be discovered — Subbed was built for you.
         </p>
         <div className="mt-8 flex justify-center text-base font-medium">
           <Link
             href="/signup"
-            className="rounded-full bg-mauve px-6 py-3 text-sand transition-colors hover:bg-rose"
+            className="rounded-full bg-mauve px-6 py-3 text-white transition-colors hover:bg-rose"
           >
             Join Subbed today →
           </Link>

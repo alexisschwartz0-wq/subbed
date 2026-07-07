@@ -72,7 +72,7 @@ export function StudioProfileForm({
             type="file"
             accept="image/*"
             onChange={onPhotoChange}
-            className="mt-1 w-full text-sm text-ink/70 file:mr-3 file:rounded-full file:border-0 file:bg-mauve file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-sand hover:file:bg-rose"
+            className="mt-1 w-full text-sm text-ink/70 file:mr-3 file:rounded-full file:border-0 file:bg-mauve file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-white hover:file:bg-rose"
           />
         </div>
       </div>
@@ -219,7 +219,7 @@ export function StudioProfileForm({
 
       <button
         type="submit"
-        className="w-full rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+        className="w-full rounded-full bg-mauve px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rose"
       >
         Save profile
       </button>

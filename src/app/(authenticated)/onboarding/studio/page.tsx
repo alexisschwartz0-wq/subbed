@@ -46,7 +46,7 @@ export default async function StudioOnboardingPage({
         </p>
 
         {params.error && (
-          <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-rose">
+          <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-ink">
             {params.error}
           </p>
         )}

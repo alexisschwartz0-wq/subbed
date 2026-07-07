@@ -81,14 +81,14 @@ export default async function BrowseStudiosPage({
 
         <button
           type="submit"
-          className="rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+          className="rounded-full bg-mauve px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rose"
         >
           Search
         </button>
       </form>
 
       {error && (
-        <p className="mt-6 rounded-lg bg-rose/10 px-3 py-2 text-sm text-rose">
+        <p className="mt-6 rounded-lg bg-rose/10 px-3 py-2 text-sm text-ink">
           {error.message}
         </p>
       )}
@@ -136,7 +136,7 @@ export default async function BrowseStudiosPage({
                   href={studio.website_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-mauve hover:text-rose"
+                  className="font-medium text-ink hover:text-rose"
                 >
                   Website
                 </a>

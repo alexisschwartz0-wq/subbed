@@ -22,7 +22,7 @@ export default async function LoginPage({
           <p className="mt-2 text-sm font-light text-ink/60">Welcome back.</p>
 
           {params.error && (
-            <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-rose">
+            <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-ink">
               {params.error}
             </p>
           )}
@@ -56,14 +56,14 @@ export default async function LoginPage({
 
           <button
             type="submit"
-            className="mt-6 w-full rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+            className="mt-6 w-full rounded-full bg-mauve px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rose"
           >
             Sign in
           </button>
 
           <p className="mt-4 text-center text-sm text-ink/60">
             Need an account?{" "}
-            <Link href="/signup" className="font-medium text-mauve hover:text-rose">
+            <Link href="/signup" className="font-medium text-ink hover:text-rose">
               Join Subbed
             </Link>
           </p>

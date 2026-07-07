@@ -80,13 +80,13 @@ export default async function ConversationPage({
                 key={message.id}
                 className={`max-w-[75%] rounded-2xl px-4 py-2 text-sm ${
                   isMine
-                    ? "self-end bg-mauve text-sand"
+                    ? "self-end bg-mauve text-white"
                     : "self-start bg-mist text-ink"
                 }`}
               >
                 <p>{message.body}</p>
                 <p
-                  className={`mt-1 text-xs ${isMine ? "text-sand/70" : "text-ink/50"}`}
+                  className={`mt-1 text-xs ${isMine ? "text-white/70" : "text-ink/50"}`}
                 >
                   {new Date(message.created_at).toLocaleString()}
                 </p>
@@ -102,7 +102,7 @@ export default async function ConversationPage({
         </div>
 
         {errorParam && (
-          <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-rose">
+          <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-ink">
             {errorParam}
           </p>
         )}
@@ -118,7 +118,7 @@ export default async function ConversationPage({
           />
           <button
             type="submit"
-            className="rounded-full bg-mauve px-6 py-2 text-sm font-medium text-sand transition-colors hover:bg-rose"
+            className="rounded-full bg-mauve px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rose"
           >
             Send
           </button>

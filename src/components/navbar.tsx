@@ -31,7 +31,7 @@ export function Navbar() {
           </Link>
           <Link
             href="/login"
-            className="rounded-full bg-mauve px-3 py-1.5 text-sand transition-colors hover:bg-rose sm:px-4 sm:py-2"
+            className="rounded-full bg-mauve px-3 py-1.5 text-white transition-colors hover:bg-rose sm:px-4 sm:py-2"
           >
             Sign In
           </Link>

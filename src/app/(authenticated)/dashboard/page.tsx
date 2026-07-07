@@ -57,7 +57,7 @@ export default async function DashboardPage() {
             View and edit how others see you on Subbed.
           </p>
         </div>
-        <span aria-hidden className="text-2xl text-mauve">
+        <span aria-hidden className="text-2xl text-ink">
           →
         </span>
       </Link>
