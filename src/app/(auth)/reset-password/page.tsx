@@ -1,8 +1,7 @@
-import Link from "next/link";
-import { login } from "../actions";
+import { updatePassword } from "../actions";
 import { Footer } from "@/components/footer";
 
-export default async function LoginPage({
+export default async function ResetPasswordPage({
   searchParams,
 }: {
   searchParams: Promise<{ error?: string }>;
@@ -13,13 +12,15 @@ export default async function LoginPage({
     <div className="flex flex-1 flex-col">
       <main className="flex flex-1 flex-col items-center justify-center bg-sand px-6 py-24">
         <form
-          action={login}
+          action={updatePassword}
           className="w-full max-w-sm rounded-2xl border border-mauve/20 bg-white p-8 shadow-sm"
         >
           <h1 className="font-heading text-2xl font-extrabold text-ink">
-            Sign in to Subbed
+            Set a new password
           </h1>
-          <p className="mt-2 text-sm font-light text-ink/60">Welcome back.</p>
+          <p className="mt-2 text-sm font-light text-ink/60">
+            Choose a new password for your account.
+          </p>
 
           {params.error && (
             <p className="mt-4 rounded-lg bg-rose/10 px-3 py-2 text-sm text-ink">
@@ -29,34 +30,34 @@ export default async function LoginPage({
 
           <div className="mt-6 space-y-4">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-ink">
-                Email
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-ink"
+              >
+                New password
               </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="mt-1 w-full rounded-lg border border-mauve/30 px-3 py-2 text-sm focus:border-mauve focus:outline-none"
-              />
-            </div>
-            <div>
-              <div className="flex items-center justify-between">
-                <label htmlFor="password" className="block text-sm font-medium text-ink">
-                  Password
-                </label>
-                <Link
-                  href="/forgot-password"
-                  className="text-xs font-medium text-ink hover:text-rose"
-                >
-                  Forgot your password?
-                </Link>
-              </div>
               <input
                 id="password"
                 name="password"
                 type="password"
                 required
+                minLength={6}
+                className="mt-1 w-full rounded-lg border border-mauve/30 px-3 py-2 text-sm focus:border-mauve focus:outline-none"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="confirmPassword"
+                className="block text-sm font-medium text-ink"
+              >
+                Confirm new password
+              </label>
+              <input
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                required
+                minLength={6}
                 className="mt-1 w-full rounded-lg border border-mauve/30 px-3 py-2 text-sm focus:border-mauve focus:outline-none"
               />
             </div>
@@ -66,15 +67,8 @@ export default async function LoginPage({
             type="submit"
             className="mt-6 w-full rounded-full bg-mauve px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-rose"
           >
-            Sign in
+            Update password
           </button>
-
-          <p className="mt-4 text-center text-sm text-ink/60">
-            Need an account?{" "}
-            <Link href="/signup" className="font-medium text-ink hover:text-rose">
-              Join Subbed
-            </Link>
-          </p>
         </form>
       </main>
       <Footer />
