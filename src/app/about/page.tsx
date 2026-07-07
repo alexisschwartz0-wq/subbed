@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -22,13 +23,13 @@ const VALUES = [
 
 const FOUNDERS = [
   {
-    initials: "ES",
+    photo: "/founders/erica.jpg",
     name: "Erica Schwartz",
     title: "Co-Founder · Studio Owner & Fitness Instructor, 30+ years",
     bio: "Erica has spent over three decades in the fitness and wellness industry as both an instructor and studio owner in Orange County. She knows the rhythms, the relationships, and the heart of keeping a studio running beautifully. Subbed is built on everything she's learned — and every connection she's made along the way.",
   },
   {
-    initials: "LS",
+    photo: "/founders/lexi.jpg",
     name: "Lexi Schwartz",
     title: "Co-Founder · Studio Owner, HR & Tech Startup Background",
     bio: "Lexi brings a background in HR, recruiting, and tech startups to a problem she knows personally as a studio owner in OC. She's spent her career connecting the right people to the right opportunities — and Subbed is that same instinct applied to the world she grew up in. She built the product. Her mom made sure it was built right.",
@@ -127,8 +128,14 @@ export default function About() {
                 key={founder.name}
                 className="rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm sm:p-8"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-mist font-heading text-lg font-extrabold text-ink">
-                  {founder.initials}
+                <div className="h-20 w-20 overflow-hidden rounded-full bg-mist sm:h-24 sm:w-24">
+                  <Image
+                    src={founder.photo}
+                    alt={founder.name}
+                    width={96}
+                    height={96}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
                 <h3 className="mt-4 font-heading text-lg font-extrabold text-ink sm:text-xl">
                   {founder.name}
