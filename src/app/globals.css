@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F7F4F1;
+  --background: #FBF4F0;
   --foreground: #0E0E0E;
 
   /* Subbed brand palette */
-  --color-mauve: #9B6E7E;
-  --color-rose: #B8758A;
-  --color-sand: #F7F4F1;
-  --color-mist: #F0E8ED;
+  --color-mauve: #E8806A;
+  --color-rose: #F0997F;
+  --color-sand: #FBF4F0;
+  --color-mist: #FBE3DA;
   --color-ink: #0E0E0E;
 }
 
