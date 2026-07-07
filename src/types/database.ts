@@ -131,12 +131,121 @@ export type Database = {
           },
         ]
       }
+      job_applications: {
+        Row: {
+          conversation_id: string | null
+          created_at: string
+          id: string
+          instructor_id: string
+          job_listing_id: string
+          kind: Database["public"]["Enums"]["job_interest_kind"]
+          viewed_at: string | null
+        }
+        Insert: {
+          conversation_id?: string | null
+          created_at?: string
+          id?: string
+          instructor_id: string
+          job_listing_id: string
+          kind?: Database["public"]["Enums"]["job_interest_kind"]
+          viewed_at?: string | null
+        }
+        Update: {
+          conversation_id?: string | null
+          created_at?: string
+          id?: string
+          instructor_id?: string
+          job_listing_id?: string
+          kind?: Database["public"]["Enums"]["job_interest_kind"]
+          viewed_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "job_applications_conversation_id_fkey"
+            columns: ["conversation_id"]
+            isOneToOne: false
+            referencedRelation: "conversations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "job_applications_instructor_id_fkey"
+            columns: ["instructor_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "job_applications_job_listing_id_fkey"
+            columns: ["job_listing_id"]
+            isOneToOne: false
+            referencedRelation: "job_listings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      job_listings: {
+        Row: {
+          created_at: string
+          description: string | null
+          discipline: Database["public"]["Enums"]["job_discipline"]
+          id: string
+          listing_type: Database["public"]["Enums"]["job_listing_type"]
+          location: string | null
+          needed_at: string | null
+          pay_rate_cents: number | null
+          requirements: string | null
+          status: Database["public"]["Enums"]["job_listing_status"]
+          studio_id: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          discipline: Database["public"]["Enums"]["job_discipline"]
+          id?: string
+          listing_type: Database["public"]["Enums"]["job_listing_type"]
+          location?: string | null
+          needed_at?: string | null
+          pay_rate_cents?: number | null
+          requirements?: string | null
+          status?: Database["public"]["Enums"]["job_listing_status"]
+          studio_id: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          discipline?: Database["public"]["Enums"]["job_discipline"]
+          id?: string
+          listing_type?: Database["public"]["Enums"]["job_listing_type"]
+          location?: string | null
+          needed_at?: string | null
+          pay_rate_cents?: number | null
+          requirements?: string | null
+          status?: Database["public"]["Enums"]["job_listing_status"]
+          studio_id?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "job_listings_studio_id_fkey"
+            columns: ["studio_id"]
+            isOneToOne: false
+            referencedRelation: "studios"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       messages: {
         Row: {
           body: string
           conversation_id: string
           created_at: string
           id: string
+          job_listing_id: string | null
           sender_id: string
         }
         Insert: {
@@ -144,6 +253,7 @@ export type Database = {
           conversation_id: string
           created_at?: string
           id?: string
+          job_listing_id?: string | null
           sender_id: string
         }
         Update: {
@@ -151,6 +261,7 @@ export type Database = {
           conversation_id?: string
           created_at?: string
           id?: string
+          job_listing_id?: string | null
           sender_id?: string
         }
         Relationships: [
@@ -159,6 +270,13 @@ export type Database = {
             columns: ["conversation_id"]
             isOneToOne: false
             referencedRelation: "conversations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "messages_job_listing_id_fkey"
+            columns: ["job_listing_id"]
+            isOneToOne: false
+            referencedRelation: "job_listings"
             referencedColumns: ["id"]
           },
           {
@@ -261,9 +379,19 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      active_job_listings_count: { Args: never; Returns: number }
     }
     Enums: {
+      job_discipline:
+        | "yoga"
+        | "pilates"
+        | "sound_bath"
+        | "barre"
+        | "cycle"
+        | "group_fitness"
+      job_interest_kind: "application" | "inquiry"
+      job_listing_status: "active" | "filled" | "closed"
+      job_listing_type: "last_minute_sub" | "part_time" | "full_time"
       specialty: "yoga" | "pilates" | "sound_bath" | "fitness"
       user_role: "instructor" | "studio_owner"
     }
@@ -396,6 +524,17 @@ export const Constants = {
   },
   public: {
     Enums: {
+      job_discipline: [
+        "yoga",
+        "pilates",
+        "sound_bath",
+        "barre",
+        "cycle",
+        "group_fitness",
+      ],
+      job_interest_kind: ["application", "inquiry"],
+      job_listing_status: ["active", "filled", "closed"],
+      job_listing_type: ["last_minute_sub", "part_time", "full_time"],
       specialty: ["yoga", "pilates", "sound_bath", "fitness"],
       user_role: ["instructor", "studio_owner"],
     },

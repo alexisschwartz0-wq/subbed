@@ -56,7 +56,8 @@ export default async function MyProfilePage() {
             </Link>
           </div>
           <p className="mt-1 text-sm font-light text-ink/60">
-            This is what studios see when they browse instructors.
+            This is what a studio sees once you apply or message them
+            about a listing. Your profile stays private until then.
           </p>
 
           <div className="mt-6 rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm sm:p-8">

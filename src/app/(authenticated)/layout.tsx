@@ -45,19 +45,27 @@ export default async function AuthenticatedLayout({
             </Link>
             {role === "studio_owner" && (
               <Link
-                href="/dashboard/instructors"
+                href="/dashboard/jobs"
                 className="rounded-full px-2 py-1 transition-colors hover:bg-mist hover:text-ink sm:px-3 sm:py-1.5"
               >
-                Browse instructors
+                My Job Listings
               </Link>
             )}
             {role === "instructor" && (
-              <Link
-                href="/dashboard/studios"
-                className="rounded-full px-2 py-1 transition-colors hover:bg-mist hover:text-ink sm:px-3 sm:py-1.5"
-              >
-                Browse studios
-              </Link>
+              <>
+                <Link
+                  href="/dashboard/browse-jobs"
+                  className="rounded-full px-2 py-1 transition-colors hover:bg-mist hover:text-ink sm:px-3 sm:py-1.5"
+                >
+                  Browse Jobs
+                </Link>
+                <Link
+                  href="/dashboard/studios"
+                  className="rounded-full px-2 py-1 transition-colors hover:bg-mist hover:text-ink sm:px-3 sm:py-1.5"
+                >
+                  Browse studios
+                </Link>
+              </>
             )}
             <Link
               href="/dashboard/messages"

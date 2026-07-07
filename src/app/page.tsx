@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { createClient } from "@/lib/supabase/server";
 
 const DISCIPLINES = ["Yoga", "Pilates", "Sound Baths", "Group Fitness", "Barre", "Cycle"];
 
@@ -79,7 +80,12 @@ const HIRING_TYPES = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const supabase = await createClient();
+  const { data: openPositions } = await supabase.rpc(
+    "active_job_listings_count",
+  );
+
   return (
     <div className="flex flex-1 flex-col">
       <Navbar />
@@ -112,6 +118,17 @@ export default function Home() {
             I&apos;m a Studio Owner
           </Link>
         </div>
+
+        {!!openPositions && openPositions > 0 && (
+          <Link
+            href="/signup"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-mist px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-mauve hover:text-white"
+          >
+            <strong className="font-heading">{openPositions}</strong>
+            open position{openPositions === 1 ? "" : "s"} on Subbed right
+            now — join to browse
+          </Link>
+        )}
       </main>
 
       <section id="disciplines" className="px-6 py-20">

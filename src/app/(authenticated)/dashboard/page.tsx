@@ -45,22 +45,62 @@ export default async function DashboardPage() {
         Signed in as {user.email}
       </p>
 
-      <Link
-        href="/dashboard/profile"
-        className="mt-8 flex w-full max-w-sm items-center justify-between rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm transition-colors hover:bg-mist"
-      >
-        <div>
-          <p className="font-heading text-lg font-extrabold text-ink">
-            My Profile
-          </p>
-          <p className="mt-1 text-sm font-light text-ink/60">
-            View and edit how others see you on Subbed.
-          </p>
-        </div>
-        <span aria-hidden className="text-2xl text-ink">
-          →
-        </span>
-      </Link>
+      <div className="mt-8 flex w-full max-w-sm flex-col gap-4">
+        <Link
+          href="/dashboard/profile"
+          className="flex items-center justify-between rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm transition-colors hover:bg-mist"
+        >
+          <div>
+            <p className="font-heading text-lg font-extrabold text-ink">
+              My Profile
+            </p>
+            <p className="mt-1 text-sm font-light text-ink/60">
+              View and edit how others see you on Subbed.
+            </p>
+          </div>
+          <span aria-hidden className="text-2xl text-ink">
+            →
+          </span>
+        </Link>
+
+        {user.user_metadata?.role === "studio_owner" && (
+          <Link
+            href="/dashboard/jobs"
+            className="flex items-center justify-between rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm transition-colors hover:bg-mist"
+          >
+            <div>
+              <p className="font-heading text-lg font-extrabold text-ink">
+                My Job Listings
+              </p>
+              <p className="mt-1 text-sm font-light text-ink/60">
+                Post openings and see who&apos;s applied.
+              </p>
+            </div>
+            <span aria-hidden className="text-2xl text-ink">
+              →
+            </span>
+          </Link>
+        )}
+
+        {user.user_metadata?.role === "instructor" && (
+          <Link
+            href="/dashboard/browse-jobs"
+            className="flex items-center justify-between rounded-2xl border border-mauve/20 bg-white p-6 shadow-sm transition-colors hover:bg-mist"
+          >
+            <div>
+              <p className="font-heading text-lg font-extrabold text-ink">
+                Browse Jobs
+              </p>
+              <p className="mt-1 text-sm font-light text-ink/60">
+                Find subs, part-time, and full-time roles.
+              </p>
+            </div>
+            <span aria-hidden className="text-2xl text-ink">
+              →
+            </span>
+          </Link>
+        )}
+      </div>
     </main>
   );
 }
