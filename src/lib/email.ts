@@ -1,4 +1,4 @@
-const FROM = "Subbed <notifications@getsubbed.co>";
+const FROM = "Subbed <applications@getsubbed.co>";
 
 function emailShell(heading: string, body: string, ctaHref: string, ctaLabel: string) {
   return `<!doctype html>
