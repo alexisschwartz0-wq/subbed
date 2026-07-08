@@ -47,7 +47,7 @@ async function sendEmail(to: string, subject: string, html: string) {
   }
 
   try {
-    await fetch("https://api.resend.com/emails", {
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -55,6 +55,13 @@ async function sendEmail(to: string, subject: string, html: string) {
       },
       body: JSON.stringify({ from: FROM, to, subject, html }),
     });
+
+    const body = await response.text();
+    if (!response.ok) {
+      console.error(`Resend rejected email "${subject}" to ${to} (${response.status}): ${body}`);
+    } else {
+      console.log(`Resend accepted email "${subject}" to ${to}: ${body}`);
+    }
   } catch (err) {
     console.error(`Failed to send email "${subject}" to ${to}:`, err);
   }
