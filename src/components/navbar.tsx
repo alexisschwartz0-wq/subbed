@@ -18,18 +18,6 @@ export function Navbar() {
             About
           </Link>
           <Link
-            href="/#instructors"
-            className="hidden rounded-full px-3 py-1.5 transition-colors hover:bg-mist hover:text-ink sm:inline-block"
-          >
-            For Instructors
-          </Link>
-          <Link
-            href="/#studios"
-            className="hidden rounded-full px-3 py-1.5 transition-colors hover:bg-mist hover:text-ink sm:inline-block"
-          >
-            For Studios
-          </Link>
-          <Link
             href="/login"
             className="rounded-full bg-mauve px-3 py-1.5 text-white transition-colors hover:bg-rose sm:px-4 sm:py-2"
           >

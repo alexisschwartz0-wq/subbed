@@ -100,10 +100,7 @@ export default async function Home() {
           Subbed connects yoga, Pilates, sound bath, and fitness instructors
           with studio owners — for last-minute subs and long-term hiring.
         </p>
-        <div
-          id="instructors"
-          className="mt-10 flex flex-col gap-4 text-base font-medium sm:flex-row"
-        >
+        <div className="mt-10 flex flex-col gap-4 text-base font-medium sm:flex-row">
           <Link
             href="/signup?role=instructor"
             className="rounded-full bg-mauve px-6 py-3 text-white transition-colors hover:bg-rose"
@@ -111,7 +108,6 @@ export default async function Home() {
             I&apos;m an Instructor
           </Link>
           <Link
-            id="studios"
             href="/signup?role=studio_owner"
             className="rounded-full border border-mauve px-6 py-3 text-ink transition-colors hover:bg-mist"
           >
@@ -195,7 +191,7 @@ export default async function Home() {
         <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-3">
           {STATS.map((stat) => (
             <div key={stat.label}>
-              <p className="font-heading text-4xl font-extrabold sm:text-5xl">{stat.value}</p>
+              <p className="font-heading text-4xl font-extrabold">{stat.value}</p>
               <p className="mx-auto mt-3 max-w-[220px] text-sm font-light text-white/80">
                 {stat.label}
               </p>
