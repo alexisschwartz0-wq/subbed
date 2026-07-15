@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Capacitor } from "@capacitor/core";
 
 type BeforeInstallPromptEvent = Event & {
   prompt: () => Promise<void>;
@@ -27,6 +28,10 @@ export function InstallPrompt() {
   const [state, setState] = useState<PromptState>({ kind: "hidden" });
 
   useEffect(() => {
+    // Already running as the native app — "add to home screen" makes no
+    // sense here, the user is already in the dedicated app.
+    if (Capacitor.isNativePlatform()) return;
+
     if (isStandalone() || localStorage.getItem(DISMISSED_KEY) === "1") {
       return;
     }

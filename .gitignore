@@ -41,3 +41,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# iOS / Xcode
+ios/App/Pods/
+ios/App/*.xcworkspace/xcuserdata/
+ios/App/**/xcuserdata/
+ios/DerivedData/
+*.xcuserstate
