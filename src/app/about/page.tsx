@@ -23,16 +23,16 @@ const VALUES = [
 
 const FOUNDERS = [
   {
-    photo: "/founders/erica.jpg",
-    name: "Erica Schwartz",
-    title: "Co-Founder · Studio Owner & Fitness Instructor, 30+ years",
-    bio: "Erica has spent over three decades in the fitness and wellness industry as both an instructor and studio owner in Orange County. She knows the rhythms, the relationships, and the heart of keeping a studio running beautifully. Subbed is built on everything she's learned — and every connection she's made along the way.",
-  },
-  {
     photo: "/founders/lexi.jpg",
     name: "Lexi Schwartz",
     title: "Co-Founder · Studio Owner, HR & Tech Startup Background",
     bio: "Lexi brings a background in HR, recruiting, and tech startups to a problem she knows personally as a studio owner in OC. She's spent her career connecting the right people to the right opportunities — and Subbed is that same instinct applied to the world she grew up in. She built the product. Her mom made sure it was built right.",
+  },
+  {
+    photo: "/founders/erica.jpg",
+    name: "Erica Schwartz",
+    title: "Co-Founder · Studio Owner & Fitness Instructor, 30+ years",
+    bio: "Erica has spent over three decades in the fitness and wellness industry as both an instructor and studio owner in Orange County. She knows the rhythms, the relationships, and the heart of keeping a studio running beautifully. Subbed is built on everything she's learned — and every connection she's made along the way.",
   },
 ];
 

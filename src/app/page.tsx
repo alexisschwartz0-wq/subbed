@@ -23,9 +23,9 @@ const STATS = [
 ];
 
 const STUDIO_BENEFITS = [
+  "Post permanent and part-time positions",
   "Find qualified subs instantly",
   "Browse profiles, certifications, and reviews",
-  "Post permanent and part-time positions",
   "Build a reliable roster",
   "One platform for subs and full hires",
 ];
@@ -58,11 +58,11 @@ const STEPS = [
 
 const HIRING_TYPES = [
   {
-    title: "Last-Minute Sub",
-    tagline: "Fill it today",
+    title: "Full-Time Hire",
+    tagline: "Grow your team",
     description:
-      "Class starts in an hour and your instructor's out sick? Message nearby instructors directly and fill the spot fast.",
-    borderClass: "border-mauve",
+      "Ready to grow your team? Find instructors looking for a long-term home at your studio.",
+    borderClass: "border-ink",
   },
   {
     title: "Part-Time Role",
@@ -72,11 +72,11 @@ const HIRING_TYPES = [
     borderClass: "border-rose",
   },
   {
-    title: "Full-Time Hire",
-    tagline: "Grow your team",
+    title: "Last-Minute Sub",
+    tagline: "Fill it today",
     description:
-      "Ready to grow your team? Find instructors looking for a long-term home at your studio.",
-    borderClass: "border-ink",
+      "Class starts in an hour and your instructor's out sick? Message nearby instructors directly and fill the spot fast.",
+    borderClass: "border-mauve",
   },
 ];
 
@@ -94,11 +94,11 @@ export default async function Home() {
           For Studios &amp; Instructors
         </p>
         <h1 className="max-w-2xl font-heading text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
-          Find your sub. Fill your class.
+          Find your instructor. Find your sub. Fill your class.
         </h1>
         <p className="mt-6 max-w-xl text-lg font-light leading-7 text-ink/70">
           Subbed connects yoga, Pilates, sound bath, and fitness instructors
-          with studio owners — for last-minute subs and long-term hiring.
+          with studio owners — for long-term hiring and last-minute subs.
         </p>
         <div className="mt-10 flex flex-col gap-4 text-base font-medium sm:flex-row">
           <Link
