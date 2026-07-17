@@ -25,6 +25,12 @@
   --color-ink: var(--color-ink);
 }
 
+/* Syne runs wide at heavy weights — tighten tracking everywhere it's
+   used as a heading font so headers don't read as stretched out. */
+.font-heading {
+  letter-spacing: -0.025em;
+}
+
 html {
   overflow-x: hidden;
 }

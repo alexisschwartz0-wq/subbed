@@ -6,7 +6,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="font-heading text-lg font-extrabold tracking-tight text-ink sm:text-xl"
+          className="font-heading text-lg font-extrabold text-ink sm:text-xl"
         >
           Subbed
         </Link>

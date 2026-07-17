@@ -45,7 +45,7 @@ export default function About() {
         <p className="mb-4 rounded-full bg-mist px-4 py-1.5 text-sm font-medium uppercase tracking-widest text-ink">
           Our story
         </p>
-        <h1 className="max-w-2xl font-heading text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
+        <h1 className="max-w-2xl font-heading text-3xl font-extrabold leading-tight text-ink sm:text-5xl">
           The right instructor. Right when you need them.
         </h1>
         <p className="mt-6 max-w-xl text-lg font-light leading-7 text-ink/70">

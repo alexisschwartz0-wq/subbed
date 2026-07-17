@@ -26,7 +26,7 @@ export default async function AuthenticatedLayout({
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-3 gap-y-2 px-4 py-3 sm:px-6 sm:py-4">
           <Link
             href="/dashboard"
-            className="font-heading text-lg font-extrabold tracking-tight text-ink sm:text-xl"
+            className="font-heading text-lg font-extrabold text-ink sm:text-xl"
           >
             Subbed
           </Link>
